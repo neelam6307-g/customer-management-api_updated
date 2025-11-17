@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Service
-public class CustomerServiceImpl implements com.example.customer_management_api.service.CustomerService {
+public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
     private final CustomerMapper customerMapper;
@@ -92,3 +92,4 @@ public class CustomerServiceImpl implements com.example.customer_management_api.
         return customerMapper.calculateTier(customer.getAnnualSpend(), customer.getLastPurchaseDate());
     }
 }
+
